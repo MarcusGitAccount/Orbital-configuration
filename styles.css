@@ -1,0 +1,38 @@
+.btn-style {
+  position: absolute;
+  top: -1px;
+  left: 230px;
+  cursor: move;
+  font-family: "Roboto";
+  display: inline;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 1px;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0;
+  transition: 500ms;
+  letter-spacing: 0.02em;
+  background: #1E90FF;
+  box-shadow: 0px 0px 0px 2px #1E90FF inset, 0px 0px 0px 4px white inset; }
+  .btn-style:hover {
+    box-shadow: none; }
+
+.textbox-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-family: "Roboto";
+  color: #1E90FF;
+  height: calc(1.4em + 3.01px);
+  padding: 0.2em; }
+
+.form-style {
+  width: 100%;
+  position: relative; }
+
+.classy-class {
+  position: absolute;
+  top: 0;
+  left: 25%; }
