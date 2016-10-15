@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.fontSize": 14,
+    "window.zoomLevel": 2.25,
+    "editor.fontFamily": "Roboto Mono",
+    "editor.mouseWheelZoom": true,
+    "window.restoreFullscreen": false,
+    "editor.tabSize": 2,
+    "editor.quickSuggestionsDelay": 12
+}
