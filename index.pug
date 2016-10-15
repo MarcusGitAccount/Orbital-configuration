@@ -12,12 +12,15 @@ html(lang="en")
 		script(src="https://code.jquery.com/ui/1.12.0/jquery-ui.js")
 		script(src="scripts/functions.js")
 		title Orbital configuration
-	body
+	body.custom-scrollbar
 		.form-style
 			input(type="text" placeholder="Enter element name" id="elements-box").textbox-style
-			a(href="").btn-style Search&nbsp
+			a(onclick="dealWithIput()").btn-style Search&nbsp
 				i(aria-hidden="true").fa.fa-search
 		.periodic-table
 			include mixins/_table
+		.result-div
+			div(id="result-content")  <br/> <br/>
+			a(href="" id="result-href" target="_blank") More info about
 		
 				

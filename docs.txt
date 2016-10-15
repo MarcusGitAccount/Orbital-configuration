@@ -9,3 +9,20 @@ Nihonium and symbol Nh, for the element 113,
 Moscovium and symbol Mc, for the element 115,
 Tennessine and symbol Ts, for the element 117, and
 Oganesson and symbol Og, for the element 118.
+
+"nihonium",  "moscovium", "tennessine", "oganesson"
+
+.custom-scrollbar
+	&::-webkit-scrollbar
+		width: 12px
+		background-color: #cccccc
+	&::-webkit-scrollbar-thumb
+		background-color: gray
+		border-radius: 5px
+	&:hover, &:active
+		background-color: #222222
+		border: 1px solid #333333
+	&::-webkit-scrollbar-track
+		border: 1px gray solid
+		border-radius: 2px
+		-webkit-box-shadow: 0 0 6px gray inset

@@ -1,5 +1,6 @@
 
-var elements = ["actinium", "aluminum", "americium", "antimony", "argon", "arsenic", "astatine", "barium", "berkelium", "beryllium", "bismuth", "bohrium", "boron", "bromine", "cadmium", "calcium", "californium", "carbon", "cerium", "cesium", "chlorine", "chromium", "cobalt", "copernicium", "copper", "curium", "darmstadtium", "dubnium", "dysprosium", "einsteinium", "nihonium ", "moscovium ", "tennessine ", "oganesson ", "erbium", "europium", "fermium", "flerovium", "fluorine", "francium", "gadolinium", "gallium", "germanium", "gold", "hafnium", "hassium", "helium", "holmium", "hydrogen", "indium", "iodine", "iridium", "iron", "krypton", "lanthanum", "lawrencium", "lead", "lithium", "livermorium", "lutetium", "magnesium", "manganese", "meitnerium", "mendelevium", "mercury", "molybdenum", "neodymium", "neon", "neptunium", "nickel", "niobium", "nitrogen", "nobelium", "osmium", "oxygen", "palladium", "phosphorus", "platinum", "plutonium", "polonium", "potassium", "praseodymium", "promethium", "protactinium", "radium", "radon", "rhenium", "rhodium", "roentgenium", "rubidium", "ruthenium", "rutherfordium", "samarium", "scandium", "seaborgium", "selenium", "silicon", "silver", "sodium", "strontium", "sulfur", "tantalum", "technetium", "tellurium", "terbium", "thallium", "thorium", "thulium", "tin", "titanium", "tungsten", "uranium", "vanadium", "xenon", "ytterbium", "yttrium", "zinc", "zirconium"]
+var elements = ["actinium", "aluminum", "americium", "antimony", "argon", "arsenic", "astatine", "barium", "berkelium", "beryllium", "bismuth", "bohrium", "boron", "bromine", "cadmium", "calcium", "californium", "carbon", "cerium", "cesium", "chlorine", "chromium", "cobalt", "copernicium", "copper", "curium", "darmstadtium", "dubnium", "dysprosium", "einsteinium", "nihonium ", "moscovium ", "tennessine ", "oganesson ", "erbium", "europium", "fermium", "flerovium", "fluorine", "francium", "gadolinium", "gallium", "germanium", "gold", "hafnium", "hassium", "helium", "holmium", "hydrogen", "indium", "iodine", "iridium", "iron", "krypton", "lanthanum", "lawrencium", "lead", "lithium", "livermorium", "lutetium", "magnesium", "manganese", "meitnerium", "mendelevium", "mercury", "molybdenum", "neodymium", "neon", "neptunium", "nickel", "niobium", "nitrogen", "nobelium", "osmium", "oxygen", "palladium", "phosphorus", "platinum", "plutonium", "polonium", "potassium", "praseodymium", "promethium", "protactinium", "radium", "radon", "rhenium", "rhodium", "roentgenium", "rubidium", "ruthenium", "rutherfordium", "samarium", "scandium", "seaborgium", "selenium", "silicon", "silver", "sodium", "strontium", "sulfur", "tantalum", "technetium", "tellurium", "terbium", "thallium", "thorium", "thulium", "tin", "titanium", "tungsten", "uranium", "vanadium", "xenon", "ytterbium", "yttrium", "zinc", "zirconium","nihonium",  "moscovium", "tennessine", "oganesson"
+]
 
 var map = new Object();
 var electronsNbr = new Object();
@@ -31,17 +32,36 @@ function getLayers(element){
 	while (electrons > 0 && index <  layers.length){
 		var whatLayer  = layers[index].split('')[1];
 		var nbr = electronsNbr[whatLayer];
+		var partialResult = "";
 
 		console.log(nbr + " " + whatLayer);
 		if (electrons >= nbr && nbr != 0)
-			result += layers[index] + nbr.toString() + " ";
+			partialResult += layers[index] + nbr.toString() + " ";
 		else
-			result += layers[index] + electrons.toString() + " ";
+			partialResult += layers[index] + electrons.toString() + " ";
+		if (index % 2 == 0)
+			partialResult = "<b>" + partialResult + "</b>";
+		result += partialResult;
 		electrons -= nbr;
 		index++;
 	}
 
+	console.log(result.length);
 	return result;
+}
+
+function dealWithIput(){
+	$(document).ready(function(){
+		var element = document.getElementById("elements-box").value;
+		var contentSize = (getLayers(element).length * 4.54).toString();
+
+
+		$("#result-content").html(getLayers(element));
+		$("#result-content").css("left", "calc(50%-" + contentSize + ")");
+		$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
+		$("#result-href").css("visibility", "visible");
+		$("#result-href").text("More info about " + element);
+	})
 }
 
 $(document).ready(function() {
