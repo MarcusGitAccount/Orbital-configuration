@@ -13,9 +13,11 @@ html(lang="en")
 		script(src="scripts/functions.js")
 		title Orbital configuration
 	body
-		p Some text here
-		p Some text there
 		.form-style
 			input(type="text" placeholder="Enter element name" id="elements-box").textbox-style
 			a(href="").btn-style Search&nbsp
 				i(aria-hidden="true").fa.fa-search
+		.periodic-table
+			include mixins/_table
+		
+				
