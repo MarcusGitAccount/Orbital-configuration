@@ -1,0 +1,5 @@
+#periodic-table{
+  position: absolute; 
+  left: calc(50% - 368px);
+  top: 50%;
+}
