@@ -4,3 +4,8 @@ s -> 2
 p -> 6
 d -> 10
 f -> 14
+
+Nihonium and symbol Nh, for the element 113,
+Moscovium and symbol Mc, for the element 115,
+Tennessine and symbol Ts, for the element 117, and
+Oganesson and symbol Og, for the element 118.
