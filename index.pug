@@ -15,7 +15,7 @@ html(lang="en")
 	body.custom-scrollbar
 		.form-style
 			input(type="text" placeholder="Enter element name" id="elements-box").textbox-style
-			a(onclick="dealWithIput()").btn-style Search&nbsp
+			a(onclick="dealWithIput()" id="btnInput").btn-style Search&nbsp
 				i(aria-hidden="true").fa.fa-search
 		.periodic-table
 			include mixins/_table

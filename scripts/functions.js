@@ -55,7 +55,6 @@ function dealWithIput(){
 		var element = document.getElementById("elements-box").value;
 		var contentSize = (getLayers(element).length * 4.54).toString();
 
-
 		$("#result-content").html(getLayers(element));
 		$("#result-content").css("left", "calc(50%-" + contentSize + ")");
 		$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
@@ -77,6 +76,11 @@ $(document).ready(function() {
 				});
 		};
 
+		$(document).keyup(function(e){
+        	if (e.keyCode == 13){
+       			$("#btnInput").delay(1000).trigger('click');       
+        }
+    })
 		console.log(getLayers("scandium"));
 
 });
