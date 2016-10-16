@@ -1,4 +1,4 @@
-all: open save
+all: save open
 
 save:
 	pug index.pug
