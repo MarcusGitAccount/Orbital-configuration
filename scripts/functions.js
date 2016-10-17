@@ -26,36 +26,57 @@ function getLayers(element){
 
 	var electrons = map[element];
 	var index = 0;
-	var result = "";
+	var result = [];
 
 	console.log(electrons);
 	while (electrons > 0 && index <  layers.length){
 		var whatLayer  = layers[index].split('')[1];
 		var nbr = electronsNbr[whatLayer];
 		var partialResult = "";
-
-		console.log(nbr + " " + whatLayer);
+		// console.log(nbr + " " + whatLayer);
 		if (electrons >= nbr && nbr != 0)
-			partialResult += layers[index] + nbr.toString() + " ";
+			result.push(layers[index] + nbr.toString());
 		else
-			partialResult += layers[index] + electrons.toString() + " ";
-		if (index % 2 == 0)
-			partialResult = "<b>" + partialResult + "</b>";
-		result += partialResult;
+			result.push(layers[index] + electrons.toString())
 		electrons -= nbr;
 		index++;
 	}
 
-	console.log(result.length);
+	if (index == 7){
+		var lastLayerArray = result[result.length - 1].split('d');
+		var lastLayerElectronsNbr = parseInt(lastLayerArray[1]);
+		var lastLayerNewString = "3d" + (lastLayerElectronsNbr + 1).toString();
+		
+		// array.join();
+		if (lastLayerElectronsNbr == 9 || lastLayerElectronsNbr == 4){
+			result[result.length - 2] = "4s1";
+			result[result.length - 1] = lastLayerNewString;
+		}
+	}
 	return result;
 }
 
-function dealWithIput(){
+function getResultAsString(element){
+	var result = getLayers(element);
+	var resultString = "";
+
+	for (var j = 0; j < result.length; j++){
+		if (j % 2 == 0)
+				resultString += "<b>" + result[j] + "</b>";
+		else				
+				resultString += result[j];
+		resultString += " "; 
+	}
+
+	return resultString;
+}
+
+function dealWithInput(){
 	$(document).ready(function(){
 		var element = document.getElementById("elements-box").value;
 		var contentSize = (getLayers(element).length * 4.54).toString();
 
-		$("#result-content").html(getLayers(element));
+		$("#result-content").html(getResultAsString(element));
 		$("#result-content").css("left", "calc(50%-" + contentSize + ")");
 		$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
 		$("#result-href").css("visibility", "visible");
