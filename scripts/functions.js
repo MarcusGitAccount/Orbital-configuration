@@ -62,9 +62,9 @@ function getResultAsString(element){
 
 	for (var j = 0; j < result.length; j++){
 		if (j % 2 == 0)
-				resultString += "<b>" + result[j] + "</b>";
+			resultString += "<b>" + result[j] + "</b>";
 		else				
-				resultString += result[j];
+			resultString += result[j];
 		resultString += " "; 
 	}
 
@@ -74,7 +74,7 @@ function getResultAsString(element){
 function dealWithInput(){
 	$(document).ready(function(){
 		var element = document.getElementById("elements-box").value;
-		var contentSize = (getLayers(element).length * 4.54).toString();
+		var contentSize = (getResultAsString(element).length * 4.54).toString();
 
 		$("#result-content").html(getResultAsString(element));
 		$("#result-content").css("left", "calc(50%-" + contentSize + ")");
@@ -85,23 +85,23 @@ function dealWithInput(){
 }
 
 $(document).ready(function() {
-		$('#elements-box').autocomplete({
-			source: elements,
-			minlength: 2
-		})
+	$('#elements-box').autocomplete({
+		source: elements,
+		minlength: 2
+	})
 
-		 $.ui.autocomplete.filter = function (array, term) {
-			var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(term), "i");
-				return $.grep(array, function (value) {
-				return matcher.test(value.label || value.value || value);
-				});
-		};
+	$.ui.autocomplete.filter = function (array, term) {
+		var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(term), "i");
+		
+		return $.grep(array, function (value) {
+			return matcher.test(value.label || value.value || value);
+		});
+	};
 
-		$(document).keyup(function(e){
-        	if (e.keyCode == 13){
-       			$("#btnInput").delay(1000).trigger('click');       
-        }
-    })
-		console.log(getLayers("scandium"));
+	$(document).keyup(function(e){
+		if (e.keyCode == 13)
+			$("#btnInput").delay(1000).trigger('click');       
+	});
+	console.log(getLayers("scandium"));
 
 });
