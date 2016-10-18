@@ -1,6 +1,5 @@
-body{
-  overflow: hidden;
-}
+body {
+  overflow: hidden; }
 
 a:hover {
   cursor: pointer; }
@@ -39,12 +38,12 @@ a:hover {
   padding: 0.2em; }
 
 .form-style {
-  position: fixed;
+  position: absolute;
   top: 10%;
   left: calc(50% - 184px); }
 
 .periodic-table {
-  position: fixed;
+  position: absolute;
   left: calc(50% - 368px);
   top: 30%; }
 
