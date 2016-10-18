@@ -145,8 +145,11 @@ $(document).ready(function() {
 	});
 	console.log(getLayers("scandium"));
 
+	var result = "{"
 	$("path").each(function(index){
 	//	console.log((index + 1).toString() + " " + this.id);
-		console.log(this.id);
+		result += '"' + this.id + '"' + ", ";
 	})
+	result += "}";
+	console.log(result);
 });
