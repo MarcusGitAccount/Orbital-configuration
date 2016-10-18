@@ -42,18 +42,30 @@ function getLayers(element){
 		index++;
 	}
 
-	if (index == 7){
-		var lastLayerArray = result[result.length - 1].split('d');
-		var lastLayerElectronsNbr = parseInt(lastLayerArray[1]);
-		var lastLayerNewString = "3d" + (lastLayerElectronsNbr + 1).toString();
-		
-		// array.join();
-		if (lastLayerElectronsNbr == 9 || lastLayerElectronsNbr == 4){
-			result[result.length - 2] = "4s1";
-			result[result.length - 1] = lastLayerNewString;
+	if (index > 4)
+		result = dealWithLastTwoLayers(result);
+	return result;
+}
+
+function dealWithLastTwoLayers(array){
+	console.log(array.length);
+	var lastLayer = array[array.length - 1].split('');
+	var penLastLayer = array[array.length - 2].split('');
+	
+	if (lastLayer[1] == 'd' && penLastLayer[1] == 's') {
+		var lastNbr = parseInt(lastLayer[2]);
+		var penLastNbr = parseInt(penLastLayer[2]);
+
+		if ((lastNbr == 9 || lastNbr == 4) && penLastNbr == 2) {
+			lastLayer[2] = (lastNbr + 1).toString();
+			penLastLayer[2] = (penLastNbr - 1).toString();
+
+			array[array.length-1] = lastLayer.join('');
+			array[array.length-2] = penLastLayer.join('');
 		}
 	}
-	return result;
+
+	return array;
 }
 
 function getResultAsString(element){
@@ -71,17 +83,46 @@ function getResultAsString(element){
 	return resultString;
 }
 
+function printOutput(element){
+	$("#result-content").html(getResultAsString(element));
+	$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
+	$("#result-href").css("visibility", "visible");
+	$("#result-href").text("More info about " + element);
+}
+
 function dealWithInput(){
 	$(document).ready(function(){
 		var element = document.getElementById("elements-box").value;
 		var contentSize = (getResultAsString(element).length * 4.54).toString();
 
-		$("#result-content").html(getResultAsString(element));
-		$("#result-content").css("left", "calc(50%-" + contentSize + ")");
-		$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
-		$("#result-href").css("visibility", "visible");
-		$("#result-href").text("More info about " + element);
-	})
+		console.log(element);
+		printOutput(element);
+	});
+}
+
+function textboxIsEmpty(){
+	var textbox = document.getElementById("elements-box").value;
+
+	if (value == "" || value == null)
+		return true;
+	return false;
+}
+
+function failedAttemptToAddAnchors(){
+	$("path").each(function(){
+		console.log(this.id);
+		var anchor = $("<a></a>");
+		var title = $("<title>" + this.id + "</title>");
+
+		anchor.on("click", function(){
+			alert("Clicking stuff");
+		});/*
+		anchor.append(title);
+		anchor.append(this);*/
+		$("#layer1").append(anchor);
+		anchor.append(title);
+		anchor.append(this);
+	});
 }
 
 $(document).ready(function() {
@@ -104,4 +145,8 @@ $(document).ready(function() {
 	});
 	console.log(getLayers("scandium"));
 
+	$("path").each(function(index){
+	//	console.log((index + 1).toString() + " " + this.id);
+		console.log(this.id);
+	})
 });

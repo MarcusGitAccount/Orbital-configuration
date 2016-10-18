@@ -1,3 +1,6 @@
+a:hover {
+  cursor: pointer; }
+
 .btn-style {
   display: inline-block;
   width: 130px;
