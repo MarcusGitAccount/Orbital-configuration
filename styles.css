@@ -1,8 +1,10 @@
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #e0f7fa }
 
 a:hover {
   cursor: pointer; }
+
 
 .btn-style {
   display: inline-block;
