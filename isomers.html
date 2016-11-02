@@ -1,0 +1,604 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="Orbital configuration" content="Orbital configuration of chemical elements"><meta name="viewport" content="width=device-width" initial-scale="1.0"><link href="styles.css" rel="stylesheet"><link href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" rel="stylesheet"><link href="icons/element.png" rel="icon"><link rel="stylesheet" href="font-awesome/css/font-awesome.css"><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;amp;subset=latin-ext" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"><script src="https://code.jquery.com/jquery-1.12.4.js"></script><script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script><script src="scripts/functions.js"></script><script scr="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet"><title>Orbital configuration</title></head><body><div class="navbar-fixed"><nav class="blue darken-1"><div class="nav-wrapper"><container> <a class="brand-logo" href="#">ChemSite</a></container><ul class="right hide-on-med-and-down" id="nav-mobile"><li><a href="index.html">Orbital Configurator</a></li><li> <a href="isomers.html">Isomers        </a></li></ul></div></nav></div><div class="custom-scrollbar"></div><div class="form-style"><input class="textbox-style input-field" type="text" placeholder="Enter element name" id="elements-box"><a class="btn-style" onclick="dealWithInput()" id="btnInput">Search&nbsp<i class="fa fa-search" aria-hidden="true"></i></a></div><div class="periodic-table"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.0" id="svg2" height="377" width="717">
+<title id="title4289">Table</title>
+<g transform="translate(-63.44189,-110.29942)" style="opacity:1" id="layer1">
+<text id="text8094" y="382" x="179" style="font-style:normal;font-weight:normal;font-size:14px;font-family:Arial;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" xml:space="preserve">
+<tspan y="382" x="179" id="tspan8096" />
+</text>
+<a onclick=printOutput('hydrogen')>
+<title>Hydrogen</title>
+<path id="Hydrogen" d="m 63.94189,146.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /> </a>
+<a onclick=printOutput('helium')>
+<title>Helium</title>
+<path id="Helium" d="m 743.94189,146.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#6FCCDD;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('lithium')>
+<title>Lithium</title>
+<path id="Lithium" d="m 63.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('beryllium')>
+<title>Beryllium</title>
+<path id="Beryllium" d="m 103.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('boron')>
+<title>Boron</title>
+<path id="Boron" d="m 543.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('carbon')>
+<title>Carbon</title>
+<path id="Carbon" d="m 583.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('nitrogen')>
+<title>Nitrogen</title>
+<path id="Nitrogen" d="m 623.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('oxygen')>
+<title>Oxygen</title>
+<path id="Oxygen" d="m 663.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('fluorine')>
+<title>Fluorine</title>
+<path id="Fluorine" d="m 703.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('neon')>
+<title>Neon</title>
+<path id="Neon" d="m 743.94189,186.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#6FCCDD;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('sodium')>
+<title>Sodium</title>
+<path id="Sodium" d="m 63.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('magnesium')>
+<title>Magnesium</title>
+<path id="Magnesium" d="m 103.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('aluminium')>
+<title>Aluminium</title>
+<path id="Aluminium" d="m 543.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('silicon')>
+<title>Silicon</title>
+<path id="Silicon" d="m 583.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('phosphorous')>
+<title>Phosphorous</title>
+<path id="Phosphorous" d="m 623.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('sulfur')>
+<title>Sulfur</title>
+<path id="Sulfur" d="m 663.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('chlorine')>
+<title>Chlorine</title>
+<path id="Chlorine" d="m 703.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('argon')>
+<title>Argon</title>
+<path id="Argon" d="m 743.94189,226.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#6FCCDD;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('potassium')>
+<title>Potassium</title>
+<path id="Potassium" d="m 63.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('calcium')>
+<title>Calcium</title>
+<path id="Calcium" d="m 103.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('scandium')>
+<title>Scandium</title>
+<path id="Scandium" d="m 143.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('titanium')>
+<title>Titanium</title>
+<path id="Titanium" d="m 183.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('vanadium')>
+<title>Vanadium</title>
+<path id="Vanadium" d="m 223.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('chromium')>
+<title>Chromium</title>
+<path id="Chromium" d="m 263.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('manganese')>
+<title>Manganese</title>
+<path id="Manganese" d="m 303.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('iron')>
+<title>Iron</title>
+<path id="Iron" d="m 343.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('cobalt')>
+<title>Cobalt</title>
+<path id="Cobalt" d="m 383.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('nickel')>
+<title>Nickel</title>
+<path id="Nickel" d="m 423.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('copper')>
+<title>Copper</title>
+<path id="Copper" d="m 463.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('zinc')>
+<title>Zinc</title>
+<path id="Zinc" d="m 503.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('gallium')>
+<title>Gallium</title>
+<path id="Gallium" d="m 543.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('germanium')>
+<title>Germanium</title>
+<path id="Germanium" d="m 583.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('arsenic')>
+<title>Arsenic</title>
+<path id="Arsenic" d="m 623.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('selenium')>
+<title>Selenium</title>
+<path id="Selenium" d="m 663.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('bromine')>
+<title>Bromine</title>
+<path id="Bromine" d="m 703.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('krypton')>
+<title>Krypton</title>
+<path id="Krypton" d="m 743.94189,266.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#6FCCDD;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('rubidium')>
+<title>Rubidium</title>
+<path id="Rubidium" d="m 63.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('strontium')>
+<title>Strontium</title>
+<path id="Strontium" d="m 103.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('yttrium')>
+<title>Yttrium</title>
+<path id="Yttrium" d="m 143.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('zirconium')>
+<title>Zirconium</title>
+<path id="Zirconium" d="m 183.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('niobium')>
+<title>Niobium</title>
+<path id="Niobium" d="m 223.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('molybdenum')>
+<title>Molybdenum</title>
+<path id="Molybdenum" d="m 263.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('technetium')>
+<title>Technetium</title>
+<path id="Technetium" d="m 303.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('ruthenium')>
+<title>Ruthenium</title>
+<path id="Ruthenium" d="m 343.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('rhodium')>
+<title>Rhodium</title>
+<path id="Rhodium" d="m 383.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('palladium')>
+<title>Palladium</title>
+<path id="Palladium" d="m 423.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('silver')>
+<title>Silver</title>
+<path id="Silver" d="m 463.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('cadmium')>
+<title>Cadmium</title>
+<path id="Cadmium" d="m 503.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('indium')>
+<title>Indium</title>
+<path id="Indium" d="m 543.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('tin')>
+<title>Tin</title>
+<path id="Tin" d="m 583.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('antimony')>
+<title>Antimony</title>
+<path id="Antimony" d="m 623.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('tellurium')>
+<title>Tellurium</title>
+<path id="Tellurium" d="m 663.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('iodine')>
+<title>Iodine</title>
+<path id="Iodine" d="m 703.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('xenon')>
+<title>Xenon</title>
+<path id="Xenon" d="m 743.94189,306.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#6FCCDD;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('caesium')>
+<title>Caesium</title>
+<path id="Caesium" d="m 63.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('barium')>
+<title>Barium</title>
+<path id="Barium" d="m 103.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('cerium')>
+<title>Cerium</title>
+<path id="Cerium" d="m 183.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('praseodymium')>
+<title>Praseodymium</title>
+<path id="Praseodymium" d="m 223.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('neodymium')>
+<title>Neodymium</title>
+<path id="Neodymium" d="m 263.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('promethium')>
+<title>Promethium</title>
+<path id="Promethium" d="m 303.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('samarium')>
+<title>Samarium</title>
+<path id="Samarium" d="m 343.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('europium')>
+<title>Europium</title>
+<path id="Europium" d="m 383.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('gadolinium')>
+<title>Gadolinium</title>
+<path id="Gadolinium" d="m 423.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('terbium')>
+<title>Terbium</title>
+<path id="Terbium" d="m 463.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('dysprosium')>
+<title>Dysprosium</title>
+<path id="Dysprosium" d="m 503.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('holmium')>
+<title>Holmium</title>
+<path id="Holmium" d="m 543.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('erbium')>
+<title>Erbium</title>
+<path id="Erbium" d="m 583.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('thulium')>
+<title>Thulium</title>
+<path id="Thulium" d="m 623.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('ytterbium')>
+<title>Ytterbium</title>
+<path id="Ytterbium" d="m 663.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a>
+<path id="Lutetium" d="m 703.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a> 
+<title></title>
+<path id="Lantanide" d="m 143.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('lanthanum')> 
+<title>Lanthanum</title>
+<path id="Lanthanum" d="m 143.94189,446.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('hafnium')>
+<title>Hafnium</title>
+<path id="Hafnium" d="m 183.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('tantalum')>
+<title>Tantalum</title>
+<path id="Tantalum" d="m 223.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('tungsten')>
+<title>Tungsten</title>
+<path id="Tungsten" d="m 263.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('rhenium')>
+<title>Rhenium</title>
+<path id="Rhenium" d="m 303.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('osmium')>
+<title>Osmium</title>
+<path id="Osmium" d="m 343.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('iridium')>
+<title>Iridium</title>
+<path id="Iridium" d="m 383.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('platinum')>
+<title>Platinum</title>
+<path id="Platinum" d="m 423.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('gold')>
+<title>Gold</title>
+<path id="Gold" d="m 463.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('mercury')>
+<title>Mercury</title>
+<path id="Mercury" d="m 503.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('thallium')>
+<title>Thallium</title>
+<path id="Thallium" d="m 543.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('lead')>
+<title>Lead</title>
+<path id="Lead" d="m 583.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('bismuth')>
+<title>Bismuth</title>
+<path id="Bismuth" d="m 623.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('polonium')>
+<title>Polonium</title>
+<path id="Polonium" d="m 663.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('astatium')>
+<title>Astatium</title>
+<path id="Astatium" d="m 703.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#0CC0E0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('radon')>
+<title>Radon</title>
+<path id="Radon" d="m 743.94189,346.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#6FCCDD;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('francium')>
+<title>Francium</title>
+<path id="Francium" d="m 63.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:none" /></a>
+<a onclick=printOutput('radium')>
+<title>Radium</title>
+<path id="Radium" d="m 103.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('thorium')>
+<title>Thorium</title>
+<path id="Thorium" d="m 183.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('protactinium')>
+<title>Protactinium</title>
+<path id="Protactinium" d="m 223.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('uranium')>
+<title>Uranium</title>
+<path id="Uranium" d="m 263.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('neptunium')>
+<title>Neptunium</title>
+<path id="Neptunium" d="m 303.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('plutonium')>
+<title>Plutonium</title>
+<path id="Plutonium" d="m 343.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('americium')>
+<title>Americium</title>
+<path id="Americium" d="m 383.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('curium')>
+<title>Curium</title>
+<path id="Curium" d="m 423.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('berkelium')>
+<title>Berkelium</title>
+<path id="Berkelium" d="m 463.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('californium')>
+<title>Californium</title>
+<path id="Californium" d="m 503.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('einsteinium')>
+<title>Einsteinium</title>
+<path id="Einsteinium" d="m 543.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('fermiun')>
+<title>Fermiun</title>
+<path id="Fermiun" d="m 583.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('mendelevium')>
+<title>Mendelevium</title>
+<path id="Mendelevium" d="m 623.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('nobelium')>
+<title>Nobelium</title>
+<path id="Nobelium" d="m 663.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('lawrencium')>
+<title>Lawrencium</title>
+<path id="Lawrencium" d="m 703.94189,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a>
+<title></title>
+<path id="Actine" d="m 143.00243,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('actinium')>
+<title>Actinium</title>
+<path id="Actinium" d="m 143.00243,486.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#EF4723;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('rutherfordium')>
+<title>Rutherfordium</title>
+<path id="Rutherfordium" d="m 183.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('dubnium')>
+<title>Dubnium</title>
+<path id="Dubnium" d="m 223.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('seaborgium')>
+<title>Seaborgium</title>
+<path id="Seaborgium" d="m 263.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('bohrium')>
+<title>Bohrium</title>
+<path id="Bohrium" d="m 303.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('hassnium')>
+<title>Hassnium</title>
+<path id="Hassnium" d="m 343.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('meitnerium')>
+<title>Meitnerium</title>
+<path id="Meitnerium" d="m 383.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('darmstadtium')>
+<title>Darmstadtium</title>
+<path id="Darmstadtium" d="m 423.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('roentgenium')>
+<title>Roentgenium</title>
+<path id="Roentgenium" d="m 463.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('copernicium')>
+<title>Copernicium</title>
+<path id="Copernicium" d="m 503.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('ununtrium')>
+<title>Ununtrium</title>
+<path id="Ununtrium" d="m 543.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('flerovium')>
+<title>Flerovium</title>
+<path id="Flerovium" d="m 583.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('ununpentium')>
+<title>Ununpentium</title>
+<path id="Ununpentium" d="m 623.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<a onclick=printOutput('ununhexium')>
+<title>Ununhexium</title>
+<path id="Ununhexium" d="m 663.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></a>
+<a onclick=printOutput('ununseptium')>
+<title>Ununseptium</title>
+<path id="Ununseptium" d="m 703.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" /></a>
+<a onclick=printOutput('ununoctium')>
+<title>Ununoctium</title>
+<path id="Ununoctium" d="m 743.94189,386.79942 c 12,0 24,0 36,0 0,-12 0,-24 0,-36 -12,0 -24,0 -36,0 0,12 0,24 0,36 z" style="fill:#F4EB23;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></a>
+<!-- Here come the text areas and spans ! -->
+<a onclick=printOutput('hydrogen')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Hydrogen</title><textPath xlink: href = '#Hydrogen'>1</textPath></text></a>
+<a onclick=printOutput('helium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Helium</title><textPath xlink: href = '#Helium'>2</textPath></text></a>
+<a onclick=printOutput('lithium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Lithium</title><textPath xlink: href = '#Lithium'>3</textPath></text></a>
+<a onclick=printOutput('beryllium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Beryllium</title><textPath xlink: href = '#Beryllium'>4</textPath></text></a>
+<a onclick=printOutput('boron')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Boron</title><textPath xlink: href = '#Boron'>5</textPath></text></a>
+<a onclick=printOutput('carbon')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Carbon</title><textPath xlink: href = '#Carbon'>6</textPath></text></a>
+<a onclick=printOutput('nitrogen')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Nitrogen</title><textPath xlink: href = '#Nitrogen'>7</textPath></text></a>
+<a onclick=printOutput('oxygen')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Oxygen</title><textPath xlink: href = '#Oxygen'>8</textPath></text></a>
+<a onclick=printOutput('fluorine')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Fluorine</title><textPath xlink: href = '#Fluorine'>9</textPath></text></a>
+<a onclick=printOutput('neon')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Neon</title><textPath xlink: href = '#Neon'>10</textPath></text></a>
+<a onclick=printOutput('sodium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Sodium</title><textPath xlink: href = '#Sodium'>11</textPath></text></a>
+<a onclick=printOutput('magnesium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Magnesium</title><textPath xlink: href = '#Magnesium'>12</textPath></text></a>
+<a onclick=printOutput('aluminium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Aluminium</title><textPath xlink: href = '#Aluminium'>13</textPath></text></a>
+<a onclick=printOutput('silicon')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Silicon</title><textPath xlink: href = '#Silicon'>14</textPath></text></a>
+<a onclick=printOutput('phosphorous')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Phosphorous</title><textPath xlink: href = '#Phosphorous'>15</textPath></text></a>
+<a onclick=printOutput('sulfur')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Sulfur</title><textPath xlink: href = '#Sulfur'>16</textPath></text></a>
+<a onclick=printOutput('chlorine')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Chlorine</title><textPath xlink: href = '#Chlorine'>17</textPath></text></a>
+<a onclick=printOutput('argon')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Argon</title><textPath xlink: href = '#Argon'>18</textPath></text></a>
+<a onclick=printOutput('potassium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Potassium</title><textPath xlink: href = '#Potassium'>19</textPath></text></a>
+<a onclick=printOutput('calcium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Calcium</title><textPath xlink: href = '#Calcium'>20</textPath></text></a>
+<a onclick=printOutput('scandium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Scandium</title><textPath xlink: href = '#Scandium'>21</textPath></text></a>
+<a onclick=printOutput('titanium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Titanium</title><textPath xlink: href = '#Titanium'>22</textPath></text></a>
+<a onclick=printOutput('vanadium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Vanadium</title><textPath xlink: href = '#Vanadium'>23</textPath></text></a>
+<a onclick=printOutput('chromium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Chromium</title><textPath xlink: href = '#Chromium'>24</textPath></text></a>
+<a onclick=printOutput('manganese')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Manganese</title><textPath xlink: href = '#Manganese'>25</textPath></text></a>
+<a onclick=printOutput('iron')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Iron</title><textPath xlink: href = '#Iron'>26</textPath></text></a>
+<a onclick=printOutput('cobalt')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Cobalt</title><textPath xlink: href = '#Cobalt'>27</textPath></text></a>
+<a onclick=printOutput('nickel')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Nickel</title><textPath xlink: href = '#Nickel'>28</textPath></text></a>
+<a onclick=printOutput('copper')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Copper</title><textPath xlink: href = '#Copper'>29</textPath></text></a>
+<a onclick=printOutput('zinc')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Zinc</title><textPath xlink: href = '#Zinc'>30</textPath></text></a>
+<a onclick=printOutput('gallium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Gallium</title><textPath xlink: href = '#Gallium'>31</textPath></text></a>
+<a onclick=printOutput('germanium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Germanium</title><textPath xlink: href = '#Germanium'>32</textPath></text></a>
+<a onclick=printOutput('arsenic')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Arsenic</title><textPath xlink: href = '#Arsenic'>33</textPath></text></a>
+<a onclick=printOutput('selenium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Selenium</title><textPath xlink: href = '#Selenium'>34</textPath></text></a>
+<a onclick=printOutput('bromine')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Bromine</title><textPath xlink: href = '#Bromine'>35</textPath></text></a>
+<a onclick=printOutput('krypton')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Krypton</title><textPath xlink: href = '#Krypton'>36</textPath></text></a>
+<a onclick=printOutput('rubidium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Rubidium</title><textPath xlink: href = '#Rubidium'>37</textPath></text></a>
+<a onclick=printOutput('strontium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Strontium</title><textPath xlink: href = '#Strontium'>38</textPath></text></a>
+<a onclick=printOutput('yttrium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Yttrium</title><textPath xlink: href = '#Yttrium'>39</textPath></text></a>
+<a onclick=printOutput('zirconium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Zirconium</title><textPath xlink: href = '#Zirconium'>40</textPath></text></a>
+<a onclick=printOutput('niobium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Niobium</title><textPath xlink: href = '#Niobium'>41</textPath></text></a>
+<a onclick=printOutput('molybdenum')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Molybdenum</title><textPath xlink: href = '#Molybdenum'>42</textPath></text></a>
+<a onclick=printOutput('technetium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Technetium</title><textPath xlink: href = '#Technetium'>43</textPath></text></a>
+<a onclick=printOutput('ruthenium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ruthenium</title><textPath xlink: href = '#Ruthenium'>44</textPath></text></a>
+<a onclick=printOutput('rhodium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Rhodium</title><textPath xlink: href = '#Rhodium'>45</textPath></text></a>
+<a onclick=printOutput('palladium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Palladium</title><textPath xlink: href = '#Palladium'>46</textPath></text></a>
+<a onclick=printOutput('silver')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Silver</title><textPath xlink: href = '#Silver'>47</textPath></text></a>
+<a onclick=printOutput('cadmium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Cadmium</title><textPath xlink: href = '#Cadmium'>48</textPath></text></a>
+<a onclick=printOutput('indium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Indium</title><textPath xlink: href = '#Indium'>49</textPath></text></a>
+<a onclick=printOutput('tin')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Tin</title><textPath xlink: href = '#Tin'>50</textPath></text></a>
+<a onclick=printOutput('antimony')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Antimony</title><textPath xlink: href = '#Antimony'>51</textPath></text></a>
+<a onclick=printOutput('tellurium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Tellurium</title><textPath xlink: href = '#Tellurium'>52</textPath></text></a>
+<a onclick=printOutput('iodine')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Iodine</title><textPath xlink: href = '#Iodine'>53</textPath></text></a>
+<a onclick=printOutput('xenon')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Xenon</title><textPath xlink: href = '#Xenon'>54</textPath></text></a>
+<a onclick=printOutput('caesium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Caesium</title><textPath xlink: href = '#Caesium'>55</textPath></text></a>
+<a onclick=printOutput('barium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Barium</title><textPath xlink: href = '#Barium'>56</textPath></text></a>
+<a onclick=printOutput('lanthanum')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Lanthanum</title><textPath xlink: href = '#Lanthanum'>57</textPath></text></a>
+<a onclick=printOutput('cerium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Cerium</title><textPath xlink: href = '#Cerium'>58</textPath></text></a>
+<a onclick=printOutput('praseodymium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Praseodymium</title><textPath xlink: href = '#Praseodymium'>59</textPath></text></a>
+<a onclick=printOutput('neodymium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Neodymium</title><textPath xlink: href = '#Neodymium'>60</textPath></text></a>
+<a onclick=printOutput('promethium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Promethium</title><textPath xlink: href = '#Promethium'>61</textPath></text></a>
+<a onclick=printOutput('samarium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Samarium</title><textPath xlink: href = '#Samarium'>62</textPath></text></a>
+<a onclick=printOutput('europium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Europium</title><textPath xlink: href = '#Europium'>63</textPath></text></a>
+<a onclick=printOutput('gadolinium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Gadolinium</title><textPath xlink: href = '#Gadolinium'>64</textPath></text></a>
+<a onclick=printOutput('terbium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Terbium</title><textPath xlink: href = '#Terbium'>65</textPath></text></a>
+<a onclick=printOutput('dysprosium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Dysprosium</title><textPath xlink: href = '#Dysprosium'>66</textPath></text></a>
+<a onclick=printOutput('holmium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Holmium</title><textPath xlink: href = '#Holmium'>67</textPath></text></a>
+<a onclick=printOutput('erbium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Erbium</title><textPath xlink: href = '#Erbium'>68</textPath></text></a>
+<a onclick=printOutput('thulium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Thulium</title><textPath xlink: href = '#Thulium'>69</textPath></text></a>
+<a onclick=printOutput('ytterbium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ytterbium</title><textPath xlink: href = '#Ytterbium'>70</textPath></text></a>
+<a onclick=printOutput('lutetium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Lutetium</title><textPath xlink: href = '#Lutetium'>71</textPath></text></a>
+<a onclick=printOutput('hafnium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Hafnium</title><textPath xlink: href = '#Hafnium'>72</textPath></text></a>
+<a onclick=printOutput('tantalum')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Tantalum</title><textPath xlink: href = '#Tantalum'>73</textPath></text></a>
+<a onclick=printOutput('tungsten')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Tungsten</title><textPath xlink: href = '#Tungsten'>74</textPath></text></a>
+<a onclick=printOutput('rhenium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Rhenium</title><textPath xlink: href = '#Rhenium'>75</textPath></text></a>
+<a onclick=printOutput('osmium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Osmium</title><textPath xlink: href = '#Osmium'>76</textPath></text></a>
+<a onclick=printOutput('iridium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Iridium</title><textPath xlink: href = '#Iridium'>77</textPath></text></a>
+<a onclick=printOutput('platinum')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Platinum</title><textPath xlink: href = '#Platinum'>78</textPath></text></a>
+<a onclick=printOutput('gold')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Gold</title><textPath xlink: href = '#Gold'>79</textPath></text></a>
+<a onclick=printOutput('mercury')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Mercury</title><textPath xlink: href = '#Mercury'>80</textPath></text></a>
+<a onclick=printOutput('thallium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Thallium</title><textPath xlink: href = '#Thallium'>81</textPath></text></a>
+<a onclick=printOutput('lead')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Lead</title><textPath xlink: href = '#Lead'>82</textPath></text></a>
+<a onclick=printOutput('bismuth')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Bismuth</title><textPath xlink: href = '#Bismuth'>83</textPath></text></a>
+<a onclick=printOutput('polonium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Polonium</title><textPath xlink: href = '#Polonium'>84</textPath></text></a>
+<a onclick=printOutput('astatium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Astatium</title><textPath xlink: href = '#Astatium'>85</textPath></text></a>
+<a onclick=printOutput('radon')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Radon</title><textPath xlink: href = '#Radon'>86</textPath></text></a>
+<a onclick=printOutput('francium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Francium</title><textPath xlink: href = '#Francium'>87</textPath></text></a>
+<a onclick=printOutput('radium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Radium</title><textPath xlink: href = '#Radium'>88</textPath></text></a>
+<a onclick=printOutput('actinium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Actinium</title><textPath xlink: href = '#Actinium'>89</textPath></text></a>
+<a onclick=printOutput('thorium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Thorium</title><textPath xlink: href = '#Thorium'>90</textPath></text></a>
+<a onclick=printOutput('protactinium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Protactinium</title><textPath xlink: href = '#Protactinium'>91</textPath></text></a>
+<a onclick=printOutput('uranium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Uranium</title><textPath xlink: href = '#Uranium'>92</textPath></text></a>
+<a onclick=printOutput('neptunium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Neptunium</title><textPath xlink: href = '#Neptunium'>93</textPath></text></a>
+<a onclick=printOutput('plutonium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Plutonium</title><textPath xlink: href = '#Plutonium'>94</textPath></text></a>
+<a onclick=printOutput('americium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Americium</title><textPath xlink: href = '#Americium'>95</textPath></text></a>
+<a onclick=printOutput('curium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Curium</title><textPath xlink: href = '#Curium'>96</textPath></text></a>
+<a onclick=printOutput('berkelium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Berkelium</title><textPath xlink: href = '#Berkelium'>97</textPath></text></a>
+<a onclick=printOutput('californium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Californium</title><textPath xlink: href = '#Californium'>98</textPath></text></a>
+<a onclick=printOutput('einsteinium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Einsteinium</title><textPath xlink: href = '#Einsteinium'>99</textPath></text></a>
+<a onclick=printOutput('fermiun')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Fermiun</title><textPath xlink: href = '#Fermiun'>100</textPath></text></a>
+<a onclick=printOutput('mendelevium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Mendelevium</title><textPath xlink: href = '#Mendelevium'>101</textPath></text></a>
+<a onclick=printOutput('nobelium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Nobelium</title><textPath xlink: href = '#Nobelium'>102</textPath></text></a>
+<a onclick=printOutput('lawrencium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Lawrencium</title><textPath xlink: href = '#Lawrencium'>103</textPath></text></a>
+<a onclick=printOutput('rutherfordium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Rutherfordium</title><textPath xlink: href = '#Rutherfordium'>104</textPath></text></a>
+<a onclick=printOutput('dubnium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Dubnium</title><textPath xlink: href = '#Dubnium'>105</textPath></text></a>
+<a onclick=printOutput('seaborgium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Seaborgium</title><textPath xlink: href = '#Seaborgium'>106</textPath></text></a>
+<a onclick=printOutput('bohrium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Bohrium</title><textPath xlink: href = '#Bohrium'>107</textPath></text></a>
+<a onclick=printOutput('hassnium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Hassnium</title><textPath xlink: href = '#Hassnium'>108</textPath></text></a>
+<a onclick=printOutput('meitnerium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Meitnerium</title><textPath xlink: href = '#Meitnerium'>109</textPath></text></a>
+<a onclick=printOutput('darmstadtium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Darmstadtium</title><textPath xlink: href = '#Darmstadtium'>110</textPath></text></a>
+<a onclick=printOutput('roentgenium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Roentgenium</title><textPath xlink: href = '#Roentgenium'>111</textPath></text></a>
+<a onclick=printOutput('copernicium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Copernicium</title><textPath xlink: href = '#Copernicium'>112</textPath></text></a>
+<a onclick=printOutput('ununtrium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ununtrium</title><textPath xlink: href = '#Ununtrium'>113</textPath></text></a>
+<a onclick=printOutput('flerovium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Flerovium</title><textPath xlink: href = '#Flerovium'>114</textPath></text></a>
+<a onclick=printOutput('ununpentium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ununpentium</title><textPath xlink: href = '#Ununpentium'>115</textPath></text></a>
+<a onclick=printOutput('ununhexium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ununhexium</title><textPath xlink: href = '#Ununhexium'>116</textPath></text></a>
+<a onclick=printOutput('ununseptium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ununseptium</title><textPath xlink: href = '#Ununseptium'>117</textPath></text></a>
+<a onclick=printOutput('ununoctium')><text transform="translate(11.5, -21)" class="svg-text"  style="font-style:normal;font-weight:normal;font-size:13px;font-family:Arial;text-align:center;"><title>Ununoctium</title><textPath xlink: href = '#Ununoctium'>118</textPath></text></a>
+<a onclick=printOutput('hydrogen')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Hydrogen</title><textPath xlink: href = '#Hydrogen'>H</textPath></text></a>
+<a onclick=printOutput('helium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Helium</title><textPath xlink: href = '#Helium'>He</textPath></text></a>
+<a onclick=printOutput('lithium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Lithium</title><textPath xlink: href = '#Lithium'>Li</textPath></text></a>
+<a onclick=printOutput('beryllium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Beryllium</title><textPath xlink: href = '#Beryllium'>Be</textPath></text></a>
+<a onclick=printOutput('boron')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Boron</title><textPath xlink: href = '#Boron'>B</textPath></text></a>
+<a onclick=printOutput('carbon')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Carbon</title><textPath xlink: href = '#Carbon'>C</textPath></text></a>
+<a onclick=printOutput('nitrogen')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Nitrogen</title><textPath xlink: href = '#Nitrogen'>N</textPath></text></a>
+<a onclick=printOutput('oxygen')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Oxygen</title><textPath xlink: href = '#Oxygen'>O</textPath></text></a>
+<a onclick=printOutput('fluorine')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Fluorine</title><textPath xlink: href = '#Fluorine'>F</textPath></text></a>
+<a onclick=printOutput('neon')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Neon</title><textPath xlink: href = '#Neon'>Ne</textPath></text></a>
+<a onclick=printOutput('sodium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Sodium</title><textPath xlink: href = '#Sodium'>Na</textPath></text></a>
+<a onclick=printOutput('magnesium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Magnesium</title><textPath xlink: href = '#Magnesium'>Mg</textPath></text></a>
+<a onclick=printOutput('aluminium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Aluminium</title><textPath xlink: href = '#Aluminium'>Al</textPath></text></a>
+<a onclick=printOutput('silicon')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Silicon</title><textPath xlink: href = '#Silicon'>Si</textPath></text></a>
+<a onclick=printOutput('phosphorous')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Phosphorous</title><textPath xlink: href = '#Phosphorous'>P</textPath></text></a>
+<a onclick=printOutput('sulfur')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Sulfur</title><textPath xlink: href = '#Sulfur'>S</textPath></text></a>
+<a onclick=printOutput('chlorine')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Chlorine</title><textPath xlink: href = '#Chlorine'>Cl</textPath></text></a>
+<a onclick=printOutput('argon')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Argon</title><textPath xlink: href = '#Argon'>Ar</textPath></text></a>
+<a onclick=printOutput('potassium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Potassium</title><textPath xlink: href = '#Potassium'>K</textPath></text></a>
+<a onclick=printOutput('calcium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Calcium</title><textPath xlink: href = '#Calcium'>Ca</textPath></text></a>
+<a onclick=printOutput('scandium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Scandium</title><textPath xlink: href = '#Scandium'>Sc</textPath></text></a>
+<a onclick=printOutput('titanium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Titanium</title><textPath xlink: href = '#Titanium'>Ti</textPath></text></a>
+<a onclick=printOutput('vanadium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Vanadium</title><textPath xlink: href = '#Vanadium'>V</textPath></text></a>
+<a onclick=printOutput('chromium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Chromium</title><textPath xlink: href = '#Chromium'>Cr</textPath></text></a>
+<a onclick=printOutput('manganese')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Manganese</title><textPath xlink: href = '#Manganese'>Mn</textPath></text></a>
+<a onclick=printOutput('iron')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Iron</title><textPath xlink: href = '#Iron'>Fe</textPath></text></a>
+<a onclick=printOutput('cobalt')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Cobalt</title><textPath xlink: href = '#Cobalt'>Co</textPath></text></a>
+<a onclick=printOutput('nickel')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Nickel</title><textPath xlink: href = '#Nickel'>Ni</textPath></text></a>
+<a onclick=printOutput('copper')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Copper</title><textPath xlink: href = '#Copper'>Cu</textPath></text></a>
+<a onclick=printOutput('zinc')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Zinc</title><textPath xlink: href = '#Zinc'>Zn</textPath></text></a>
+<a onclick=printOutput('gallium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Gallium</title><textPath xlink: href = '#Gallium'>Ga</textPath></text></a>
+<a onclick=printOutput('germanium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Germanium</title><textPath xlink: href = '#Germanium'>Ge</textPath></text></a>
+<a onclick=printOutput('arsenic')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Arsenic</title><textPath xlink: href = '#Arsenic'>As</textPath></text></a>
+<a onclick=printOutput('selenium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Selenium</title><textPath xlink: href = '#Selenium'>Se</textPath></text></a>
+<a onclick=printOutput('bromine')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Bromine</title><textPath xlink: href = '#Bromine'>Br</textPath></text></a>
+<a onclick=printOutput('krypton')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Krypton</title><textPath xlink: href = '#Krypton'>Kr</textPath></text></a>
+<a onclick=printOutput('rubidium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Rubidium</title><textPath xlink: href = '#Rubidium'>Rb</textPath></text></a>
+<a onclick=printOutput('strontium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Strontium</title><textPath xlink: href = '#Strontium'>Sr</textPath></text></a>
+<a onclick=printOutput('yttrium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Yttrium</title><textPath xlink: href = '#Yttrium'>Y</textPath></text></a>
+<a onclick=printOutput('zirconium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Zirconium</title><textPath xlink: href = '#Zirconium'>Zr</textPath></text></a>
+<a onclick=printOutput('niobium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Niobium</title><textPath xlink: href = '#Niobium'>Nb</textPath></text></a>
+<a onclick=printOutput('molybdenum')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Molybdenum</title><textPath xlink: href = '#Molybdenum'>Mo</textPath></text></a>
+<a onclick=printOutput('technetium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Technetium</title><textPath xlink: href = '#Technetium'>Tc</textPath></text></a>
+<a onclick=printOutput('ruthenium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ruthenium</title><textPath xlink: href = '#Ruthenium'>Ru</textPath></text></a>
+<a onclick=printOutput('rhodium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Rhodium</title><textPath xlink: href = '#Rhodium'>Rh</textPath></text></a>
+<a onclick=printOutput('palladium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Palladium</title><textPath xlink: href = '#Palladium'>Pd</textPath></text></a>
+<a onclick=printOutput('silver')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Silver</title><textPath xlink: href = '#Silver'>Ag</textPath></text></a>
+<a onclick=printOutput('cadmium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Cadmium</title><textPath xlink: href = '#Cadmium'>Cd</textPath></text></a>
+<a onclick=printOutput('indium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Indium</title><textPath xlink: href = '#Indium'>In</textPath></text></a>
+<a onclick=printOutput('tin')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Tin</title><textPath xlink: href = '#Tin'>Sn</textPath></text></a>
+<a onclick=printOutput('antimony')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Antimony</title><textPath xlink: href = '#Antimony'>Sb</textPath></text></a>
+<a onclick=printOutput('tellurium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Tellurium</title><textPath xlink: href = '#Tellurium'>Te</textPath></text></a>
+<a onclick=printOutput('iodine')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Iodine</title><textPath xlink: href = '#Iodine'>I</textPath></text></a>
+<a onclick=printOutput('xenon')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Xenon</title><textPath xlink: href = '#Xenon'>Xe</textPath></text></a>
+<a onclick=printOutput('caesium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Caesium</title><textPath xlink: href = '#Caesium'>Cs</textPath></text></a>
+<a onclick=printOutput('barium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Barium</title><textPath xlink: href = '#Barium'>Ba</textPath></text></a>
+<a onclick=printOutput('cerium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Cerium</title><textPath xlink: href = '#Cerium'>Ce</textPath></text></a>
+<a onclick=printOutput('praseodymium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Praseodymium</title><textPath xlink: href = '#Praseodymium'>Pr</textPath></text></a>
+<a onclick=printOutput('neodymium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Neodymium</title><textPath xlink: href = '#Neodymium'>Nd</textPath></text></a>
+<a onclick=printOutput('promethium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Promethium</title><textPath xlink: href = '#Promethium'>Pm</textPath></text></a>
+<a onclick=printOutput('samarium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Samarium</title><textPath xlink: href = '#Samarium'>Sm</textPath></text></a>
+<a onclick=printOutput('europium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Europium</title><textPath xlink: href = '#Europium'>Eu</textPath></text></a>
+<a onclick=printOutput('gadolinium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Gadolinium</title><textPath xlink: href = '#Gadolinium'>Gd</textPath></text></a>
+<a onclick=printOutput('terbium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Terbium</title><textPath xlink: href = '#Terbium'>Tb</textPath></text></a>
+<a onclick=printOutput('dysprosium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Dysprosium</title><textPath xlink: href = '#Dysprosium'>Dy</textPath></text></a>
+<a onclick=printOutput('holmium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Holmium</title><textPath xlink: href = '#Holmium'>Ho</textPath></text></a>
+<a onclick=printOutput('erbium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Erbium</title><textPath xlink: href = '#Erbium'>Er</textPath></text></a>
+<a onclick=printOutput('thulium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Thulium</title><textPath xlink: href = '#Thulium'>Tm</textPath></text></a>
+<a onclick=printOutput('ytterbium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ytterbium</title><textPath xlink: href = '#Ytterbium'>Yb</textPath></text></a>
+<a onclick=printOutput('lutetium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Lutetium</title><textPath xlink: href = '#Lutetium'>Lu</textPath></text></a>
+<a onclick=printOutput('lanthanum')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Lanthanum</title><textPath xlink: href = '#Lanthanum'>La</textPath></text></a>
+<a onclick=printOutput('hafnium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Hafnium</title><textPath xlink: href = '#Hafnium'>Hf</textPath></text></a>
+<a onclick=printOutput('tantalum')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Tantalum</title><textPath xlink: href = '#Tantalum'>Ta</textPath></text></a>
+<a onclick=printOutput('tungsten')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Tungsten</title><textPath xlink: href = '#Tungsten'>W</textPath></text></a>
+<a onclick=printOutput('rhenium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Rhenium</title><textPath xlink: href = '#Rhenium'>Re</textPath></text></a>
+<a onclick=printOutput('osmium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Osmium</title><textPath xlink: href = '#Osmium'>Os</textPath></text></a>
+<a onclick=printOutput('iridium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Iridium</title><textPath xlink: href = '#Iridium'>Ir</textPath></text></a>
+<a onclick=printOutput('platinum')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Platinum</title><textPath xlink: href = '#Platinum'>Pt</textPath></text></a>
+<a onclick=printOutput('gold')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Gold</title><textPath xlink: href = '#Gold'>Au</textPath></text></a>
+<a onclick=printOutput('mercury')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Mercury</title><textPath xlink: href = '#Mercury'>Hg</textPath></text></a>
+<a onclick=printOutput('thallium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Thallium</title><textPath xlink: href = '#Thallium'>Tl</textPath></text></a>
+<a onclick=printOutput('lead')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Lead</title><textPath xlink: href = '#Lead'>Pb</textPath></text></a>
+<a onclick=printOutput('bismuth')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Bismuth</title><textPath xlink: href = '#Bismuth'>Bi</textPath></text></a>
+<a onclick=printOutput('polonium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Polonium</title><textPath xlink: href = '#Polonium'>Po</textPath></text></a>
+<a onclick=printOutput('astatium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Astatium</title><textPath xlink: href = '#Astatium'>At</textPath></text></a>
+<a onclick=printOutput('radon')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Radon</title><textPath xlink: href = '#Radon'>Rn</textPath></text></a>
+<a onclick=printOutput('francium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Francium</title><textPath xlink: href = '#Francium'>Fr</textPath></text></a>
+<a onclick=printOutput('radium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Radium</title><textPath xlink: href = '#Radium'>Ra</textPath></text></a>
+<a onclick=printOutput('thorium')><text transform="translate(8, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Thorium</title><textPath xlink: href = '#Thorium'>Th</textPath></text></a>
+<a onclick=printOutput('protactinium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Protactinium</title><textPath xlink: href = '#Protactinium'>Pa</textPath></text></a>
+<a onclick=printOutput('uranium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Uranium</title><textPath xlink: href = '#Uranium'>U</textPath></text></a>
+<a onclick=printOutput('neptunium')><text transform="translate(6, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Neptunium</title><textPath xlink: href = '#Neptunium'>Np</textPath></text></a>
+<a onclick=printOutput('plutonium')><text transform="translate(5, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Plutonium</title><textPath xlink: href = '#Plutonium'>Pu</textPath></text></a>
+<a onclick=printOutput('americium')><text transform="translate(5, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Americium</title><textPath xlink: href = '#Americium'>Am</textPath></text></a>
+<a onclick=printOutput('curium')><text transform="translate(3, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Curium</title><textPath xlink: href = '#Curium'>Cm</textPath></text></a>
+<a onclick=printOutput('berkelium')><text transform="translate(4, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Berkelium</title><textPath xlink: href = '#Berkelium'>Bk</textPath></text></a>
+<a onclick=printOutput('californium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Californium</title><textPath xlink: href = '#Californium'>Cf</textPath></text></a>
+<a onclick=printOutput('einsteinium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Einsteinium</title><textPath xlink: href = '#Einsteinium'>Es</textPath></text></a>
+<a onclick=printOutput('fermiun')><text transform="translate(6, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Fermiun</title><textPath xlink: href = '#Fermiun'>Fm</textPath></text></a>
+<a onclick=printOutput('mendelevium')><text transform="translate(7, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Mendelevium</title><textPath xlink: href = '#Mendelevium'>Md</textPath></text></a>
+<a onclick=printOutput('nobelium')><text transform="translate(6, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Nobelium</title><textPath xlink: href = '#Nobelium'>No</textPath></text></a>
+<a onclick=printOutput('lawrencium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Lawrencium</title><textPath xlink: href = '#Lawrencium'>Lr</textPath></text></a>
+<a onclick=printOutput('actinium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Actinium</title><textPath xlink: href = '#Actinium'>Ac</textPath></text></a>
+<a onclick=printOutput('rutherfordium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Rutherfordium</title><textPath xlink: href = '#Rutherfordium'>Rf</textPath></text></a>
+<a onclick=printOutput('dubnium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Dubnium</title><textPath xlink: href = '#Dubnium'>Db</textPath></text></a>
+<a onclick=printOutput('seaborgium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Seaborgium</title><textPath xlink: href = '#Seaborgium'>Sg</textPath></text></a>
+<a onclick=printOutput('bohrium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Bohrium</title><textPath xlink: href = '#Bohrium'>Bh</textPath></text></a>
+<a onclick=printOutput('hassnium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Hassnium</title><textPath xlink: href = '#Hassnium'>Hs</textPath></text></a>
+<a onclick=printOutput('meitnerium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Meitnerium</title><textPath xlink: href = '#Meitnerium'>Mt</textPath></text></a>
+<a onclick=printOutput('darmstadtium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Darmstadtium</title><textPath xlink: href = '#Darmstadtium'>Ds</textPath></text></a>
+<a onclick=printOutput('roentgenium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Roentgenium</title><textPath xlink: href = '#Roentgenium'>Rg</textPath></text></a>
+<a onclick=printOutput('copernicium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Copernicium</title><textPath xlink: href = '#Copernicium'>Cn</textPath></text></a>
+<a onclick=printOutput('ununtrium')><text transform="translate(2, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ununtrium</title><textPath xlink: href = '#Ununtrium'>Uut</textPath></text></a>
+<a onclick=printOutput('flerovium')><text transform="translate(10, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Flerovium</title><textPath xlink: href = '#Flerovium'>Fl</textPath></text></a>
+<a onclick=printOutput('ununpentium')><text transform="translate(0 -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ununpentium</title><textPath xlink: href = '#Ununpentium'>Uup</textPath></text></a>
+<a onclick=printOutput('ununhexium')><text transform="translate(0, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ununhexium</title><textPath xlink: href = '#Ununhexium'>Lv</textPath></text></a>
+<a onclick=printOutput('ununseptium')><text transform="translate(0, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ununseptium</title><textPath xlink: href = '#Ununseptium'>Uus</textPath></text></a>
+<a onclick=printOutput('ununoctium')><text transform="translate(0, -5)" class="svg-text"  style="font-style:normal;font-weight:bold;font-size:19px;font-family:Arial;text-align:center;"><title>Ununoctium</title><textPath xlink: href = '#Ununoctium'>Uuo</textPath></text></a>
+</g>
+</svg></div><div class="result-div"><div id="result-content"> <br/> <br/></div><a href="" id="result-href" target="_blank">More info about</a></div></body></html>
