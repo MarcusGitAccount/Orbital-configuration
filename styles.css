@@ -56,12 +56,33 @@ a:hover {
 
 #wikipedia-results{
   position: absolute;
-  top: 90%;
+  top: 107%;
   left: calc(50% - 368px);
   right: 25%;
   font-size: 20px;
   height: 200px; }
 
+#wiki-h6{
+  position: absolute;
+  left: calc(50% - 368px);
+  top: 102%;
+}
+
 #result-href {
   text-decoration: none;
   visibility: hidden; }
+
+.li-image{
+  margin: 25px 15px 15px 15px;
+}
+
+#scroll-back{
+  z-index: -1000;
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  border-top: 5px solid #1E90FF;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #1E90FF;
+}

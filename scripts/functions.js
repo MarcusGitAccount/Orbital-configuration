@@ -108,6 +108,7 @@ function printOutput(element){
 	$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
 	$("#result-href").css("visibility", "visible");
 	$("#result-href").text("More info about " + element);
+	$("#wiki-h6").text("Wikipedia entries for " + element);
 
 	$.getJSON(url, function(data){
 		var pages = data.query.pages;
@@ -116,7 +117,7 @@ function printOutput(element){
 			var title = "<h5>" + pages[index].title + "</h5>";
 			var extract = "<p>" + pages[index].extract + "</p>"
 			var imageSrc = pages[index].hasOwnProperty("thumbnail") ? pages[index].thumbnail.source : "";
-			var img = "<img alt='Wiki image' src='" + alterWikiImageLink(imageSrc, 150) + "'/>";
+			var img = "<img class='li-image' alt='Wiki image' src='" + alterWikiImageLink(imageSrc, 150) + "'/>";
 			var listItem = "<div class=\"card horizontal\"><div class=\"card-image\">" + img + "</div><div class=\"card-stacked\"><div class=\"card-content\"><span class=\"card-title\">" + title + "</span>" + extract + "</div>" + "<div class=\"card-action\"><a class=\"blue-text\" href=\"" + link + "\">More info</a></div></div></div>";
 
 			console.log(imageSrc);
@@ -132,7 +133,9 @@ function dealWithInput(){
 		var element = document.getElementById("elements-box").value.trim();
 		var contentSize = (getResultAsString(element).length * 4.54).toString();
 
-		console.log(element);
+		$("html, body").animate({
+			scrollTop: parseInt($("#result-content").offset().top)- 100
+		}, 1000);
 		printOutput(element);
 	});
 }
@@ -162,7 +165,17 @@ function failedAttemptToAddAnchors(){
 	});
 }
 
+function scrollToResult(){
+	$(".svg-text, path").on("click", function(){
+		$("html, body").animate({
+			scrollTop: parseInt($("#result-content").offset().top)- 100
+		}, 1000);
+	});
+}
+
 $(document).ready(function() {
+	scrollToResult();
+
 	$('#elements-box').autocomplete({
 		source: elements,
 		minlength: 2
@@ -178,7 +191,7 @@ $(document).ready(function() {
 
 	$(document).keyup(function(e){
 		if (e.keyCode == 13)
-			$("#btnInput").delay(1000).trigger('click');       
+			$("#btnInput").delay(1000).trigger('click');      
 	});
 	// console.log(getLayers("scandium"));
 

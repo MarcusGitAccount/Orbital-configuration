@@ -18,7 +18,7 @@
     <title>Orbital configuration</title>
 </head>
 
-<body>
+<body onload="window.scrollTo(0, 0)">
   <div class="navbar-fixed">
     <nav class="blue darken-1">
       <div class="nav-wrapper">
@@ -647,9 +647,13 @@
         </svg>
         </div>
         <div id="result-div">
-          <div id="result-content"> <br/> <br/></div><a href="" id="result-href" target="_blank">More info about</a></div>
+          <div id="result-content"> <br/> <br/></div><a href="" id="result-href" target="_blank" title="More Info">More info about</a></div>
+          <h5 id="wiki-h6"></h5>
           <div id="wikipedia-results"></div>
         </div>
+        <a onclick="window.scrollTo(0, 0)" id="" title="Back to top">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
 </body>
 
 </html>
