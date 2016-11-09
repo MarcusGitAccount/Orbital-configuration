@@ -2,7 +2,7 @@
 {
     "editor.fontSize": 14,
     "window.zoomLevel": 2.25,
-    "editor.fontFamily": "'Monospace'",
+    "editor.fontFamily": "Monospace",
     "editor.mouseWheelZoom": true,
     "window.restoreFullscreen": false,
     "editor.tabSize": 2,
