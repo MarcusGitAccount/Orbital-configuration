@@ -84,8 +84,25 @@ function getResultAsString(element){
 	return resultString;
 }
 
+function alterWikiImageLink(link, size){
+	var newLink = link.substr(0, 8);
+	var array;
+	var sizeArray;
+
+	link = link.substr(8, link.length);
+	array = link.split('/');
+	sizeArray = array[array.length - 1].split("px");
+	sizeArray[0] = size.toString();
+	array[array.length - 1] = sizeArray.join("px");
+	link = array.join('/');
+	newLink += link;
+
+	return newLink;
+}
+
 function printOutput(element){
 	var url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch='+ element +'&callback=?'
+	var HTML = "<ul>";
 
 	$("#result-content").html(getResultAsString(element));
 	$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
@@ -93,10 +110,20 @@ function printOutput(element){
 	$("#result-href").text("More info about " + element);
 
 	$.getJSON(url, function(data){
-		//console.log(JSON.stringify(data.query.pages, null, 2));
-		Object.keys(data.query.pages).forEach(function(item){
-			console.log(data.query.pages[item]);
+		var pages = data.query.pages;
+		Object.keys(data.query.pages).forEach(function(index){
+			var link = "https://en.wikipedia.org/?curid=" + pages[index].pageid;
+			var title = "<h5>" + pages[index].title + "</h5>";
+			var extract = "<p>" + pages[index].extract + "</p>"
+			var imageSrc = pages[index].hasOwnProperty("thumbnail") ? pages[index].thumbnail.source : "";
+			var img = "<img alt='Wiki image' src='" + alterWikiImageLink(imageSrc, 150) + "'/>";
+			var listItem = "<a href='" + link + "' target='_blank'><li>" + title + extract + img + "<li></a>";
+
+			console.log(imageSrc);
+			HTML += listItem + "<hr>";
 		});
+		HTML += "</ul>"
+		$("#wikipedia-results").html(HTML);
 	});
 }
 

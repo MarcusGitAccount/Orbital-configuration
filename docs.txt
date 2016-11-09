@@ -27,7 +27,5 @@ Oganesson and symbol Og, for the element 118.
 		border-radius: 2px
 		-webkit-box-shadow: 0 0 6px gray inset
 
-						<text font-family="Arial" font-size="20" fill="black" font-weight="bold">
-            <textPath xlink:href="#Hydrogen"> H
-            </textPath>
-        		</text>
+
+https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch='+ pesquisar +'&callback=?'
