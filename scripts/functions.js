@@ -117,7 +117,7 @@ function printOutput(element){
 			var extract = "<p>" + pages[index].extract + "</p>"
 			var imageSrc = pages[index].hasOwnProperty("thumbnail") ? pages[index].thumbnail.source : "";
 			var img = "<img alt='Wiki image' src='" + alterWikiImageLink(imageSrc, 150) + "'/>";
-			var listItem = "<div class=\"card horizontal\"><div class=\"card-image\">" + img + "</div><div class=\"card-stacked\"><div class=\"card-content\"><span class=\"card-title\">" + title + "</span>" + extract + "</div>" + "<div class=\"card-action\"><a href=\"" + link + "\">More info</a></div></div></div>";
+			var listItem = "<div class=\"card horizontal\"><div class=\"card-image\">" + img + "</div><div class=\"card-stacked\"><div class=\"card-content\"><span class=\"card-title\">" + title + "</span>" + extract + "</div>" + "<div class=\"card-action\"><a class=\"blue-text\" href=\"" + link + "\">More info</a></div></div></div>";
 
 			console.log(imageSrc);
 			HTML += listItem;
