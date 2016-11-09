@@ -56,10 +56,10 @@ nav {
 
 .result-div {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: calc(50% - 368px);
   font-size: 20px;
-  height: 200px; }
+  height: 150px; }
 
 #result-href {
   text-decoration: none;
