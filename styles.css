@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   background-color: #e0f7fa }
 
 a:hover {
@@ -49,18 +48,21 @@ a:hover {
   left: calc(50% - 368px);
   top: 30%; }
 
-.result-div {
+#result-div {
   position: absolute;
-  top: 80%;
+  top: 84%;
   left: calc(50% - 368px);
+  font-size: 20px;
+  height: 200px; }
+
+#wikipedia-results{
+  position: absolute;
+  top: 90%;
+  left: calc(50% - 368px);
+  right: 25%;
   font-size: 20px;
   height: 200px; }
 
 #result-href {
   text-decoration: none;
   visibility: hidden; }
-
-.classy-class {
-  position: absolute;
-  top: 0;
-  left: 25%; }
