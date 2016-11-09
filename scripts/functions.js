@@ -102,7 +102,7 @@ function alterWikiImageLink(link, size){
 
 function printOutput(element){
 	var url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch='+ element +'&callback=?'
-	var HTML = "<ul>";
+	var HTML = "<div class=\"col s12 m7\">";
 
 	$("#result-content").html(getResultAsString(element));
 	$("#result-href").attr("href", "https://www.britannica.com/science/" + element);
@@ -117,12 +117,12 @@ function printOutput(element){
 			var extract = "<p>" + pages[index].extract + "</p>"
 			var imageSrc = pages[index].hasOwnProperty("thumbnail") ? pages[index].thumbnail.source : "";
 			var img = "<img alt='Wiki image' src='" + alterWikiImageLink(imageSrc, 150) + "'/>";
-			var listItem = "<a href='" + link + "' target='_blank'><li>" + title + extract + img + "<li></a>";
+			var listItem = "<div class=\"card horizontal\"><div class=\"card-image\">" + img + "</div><div class=\"card-stacked\"><div class=\"card-content\"><span class=\"card-title\">" + title + "</span>" + extract + "</div>" + "<div class=\"card-action\"><a href=\"" + link + "\">More info</a></div></div></div>";
 
 			console.log(imageSrc);
-			HTML += listItem + "<hr>";
+			HTML += listItem;
 		});
-		HTML += "</ul>"
+		HTML += "</div>"
 		$("#wikipedia-results").html(HTML);
 	});
 }
