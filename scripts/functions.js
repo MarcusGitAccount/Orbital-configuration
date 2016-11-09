@@ -93,7 +93,10 @@ function printOutput(element){
 	$("#result-href").text("More info about " + element);
 
 	$.getJSON(url, function(data){
-			// console.log(JSON.stringify(data.query.pages, null, 2));
+		//console.log(JSON.stringify(data.query.pages, null, 2));
+		Object.keys(data.query.pages).forEach(function(item){
+			console.log(data.query.pages[item]);
+		});
 	});
 }
 
