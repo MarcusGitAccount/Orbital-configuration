@@ -1,7 +1,6 @@
-bootstrap/ linguist-vendored
-font-awesome/ linguist-vendored
-node_modules/ linguist-vendored
-sass-styles/ linguist-vendored
-index.html linguist-vendored
-isomers.pug linguist-vendored
-index.pug linguist-vendored
+bootstrap/* linguist-vendored
+font-awesome/* linguist-vendored
+node_modules/* linguist-vendored
+sass-styles/* linguist-vendored
+*.html linguist-vendored
+*.pug linguist-vendored
